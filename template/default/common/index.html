@@ -1,0 +1,12 @@
+{template common/header}
+{foreach $out $key $value}
+<div class="div_father">
+    <div class="div_title">{$value['name']}</div>
+    {foreach $value['childern'] $key1 $value1}
+        <div class="div_content div_with_color_list">
+            <a href="forums.php?mod=display&fid={$key1}">{$value1['name']}</a><br>{$value1['description']}
+        </div>
+    {/foreach}
+</div>
+{/foreach}
+{template common/footer}

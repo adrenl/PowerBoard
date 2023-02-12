@@ -1,0 +1,27 @@
+<?php
+    $lang=array();
+    $lang['index_wel']='你好，请 ';
+    $lang['index']='首页';
+    $lang['description']='描述';
+    $lang['topiclist']='帖子列表';
+    $lang['forum']='板块';
+    $lang['author']='发布者';
+    $lang['title']='标题';
+    $lang['pubtime']='发布时间';
+    $lang['lastposttime']='最后回复时间';
+    $lang['lastposter']='最后回复者';
+    $lang['topic']='主题帖';
+    $lang['name']='名称';
+    $lang['username']='用户名';
+    $lang['password']='密码';
+    $lang['sign']='签名';
+    $lang['regtime']='注册时间';
+    $lang['lastlogintime']='最后登录时间';
+    $lang['newwindow']='新窗口打开';
+    $lang['login']='登录';
+    $lang['register']='注册';
+    $lang['keep_login']='保持登录状态';
+    $lang['locate_page']='当前页面';
+    $lang['secode']='验证码';
+    $lang['refresh_secode']='刷新验证码';
+    $lang['play']='播放';

@@ -1,0 +1,30 @@
+{eval $powerboard->page_start()}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/javascript/jquery_mobile/jquery.mobile-1.4.5.min.css">
+        <script src="static/javascript/jquery_mobile/jquery.min.js"></script>
+        <script src="static/javascript/jquery_mobile/jquery.mobile-1.4.5.min.js"></script>
+        <script src="static/javascript/common.js"></script>
+        <link rel="stylesheet" href="{css m_common}">
+        <script>
+            jQuery.mobile.ajaxEnabled=false;
+            jQuery.noConflict(true);
+        </script>
+        <title>{if $navtitle}{$navtitle}{/if} - {$_G['config']['basic_bbname']}</title>
+        {out isset($puttoheader)?$puttoheader:''}
+    </head>
+    <body>
+		<div data-role="page">
+			<div data-role="header">
+                <a href="./" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">{la index}</a>
+                <p style="text-align:center;v;">{$navtitle}</p>
+			</div>
+ 			<div data-role="navbar">
+				<ul>
+					<li><a href="user.php?mod=login">{la login}</a></li>
+					<li><a href="user.php?mod=register">{la register}</a></li>
+				</ul>
+			</div>
+            <div data-role="main" class="ui-content">

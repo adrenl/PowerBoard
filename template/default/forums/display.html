@@ -1,0 +1,26 @@
+{template common/header}
+<img src="{IMGDIR}rss.gif">
+<div class="div_father">
+    <div class="div_title">{$forumname} {la topiclist}</div>
+        <div class="div_content">
+            <table style="width:100%;">
+                <tr style="border-bottom:1px solid #b2b2b2">
+                    <td style="width:64%;">{la title}</td>
+                    <td style="width:8%;">{la author}</td>
+                    <td style="width:10%;">{la pubtime}</td>
+                    <td style="width:10%;">{la lastposttime}</td>
+                    <td style="width:8%;">{la lastposter}</td>
+                </tr>
+                {foreach $topics $value}
+                 <tr class="div_with_color_list">
+                    <td><a href="forums.php?mod=view&tid={$value['tid']}">{$value['title']}</a></td>
+                    <td>{$value['author']}</td>
+                    <td>{out _date(0,$value['pubtime'])}</td>
+                    <td>{out _date(0,$value['lastposttime'])}</td>
+                    <td>{$value['lastposter']}</td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+</div>
+{template common/footer}

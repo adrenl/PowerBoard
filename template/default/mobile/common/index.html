@@ -1,0 +1,12 @@
+{template common/header}
+{foreach $out $key $value}
+<div data-role="collapsible" data-collapsed="false">
+    <h4>{$value['name']}</h4>
+    {foreach $value['childern'] $key1 $value1}
+        <p>
+            <a href="forums.php?mod=display&fid={$key1}">{$value1['name']}</a><br>{$value1['description']}
+        </p>
+    {/foreach}
+</div>
+{/foreach}
+{template common/footer}

@@ -1,0 +1,55 @@
+{eval}
+function tpl_bb_code($code){
+	$thisid='code_'.rand(0,9999);
+	$thisolid='codeol_'.rand(0,9999);
+{/eval}
+{block return}<div class="code" id="$thisid"><ol id="$thisolid">$code</ol><a href="javascript:copy_('$thisolid');"> {la copycode} </a></div>{/block}
+{eval}
+	return $return;
+}
+
+function tpl_bb_quote($quote){
+{/eval}
+{block return} <div class="quote"><strong>{la e_quote}</strong><blockquote>$quote</blockquote></div> {/block}
+{eval}
+	return $return;
+}
+
+function tpl_bb_aplayer($src){
+	$thisid='aplayer_'.rand(0,9999);
+{/eval}
+{block return}<div class="audio"><div id="$thisid"></div><script>init_aplayer($("$thisid"),"$src");</script>
+<p class="center"><a href="$src" class="graytext" target="_blank"> {la newwindow} </a></p></div>{/block}
+{eval}
+	return $return;
+}
+function tpl_bb_dplayer($src,$width=null,$height=null){
+	$thisid='dplayer_'.rand(0,9999);
+	if($width || $height){
+	$width=$width.'px';
+	$height=$height.'px';
+{/eval}
+{block return}<div class="video"><div id="$thisid" style="width: $width ;height: $height ;"></div><script>init_dplayer($("$thisid"),"$src");</script>
+<p class="center"><a href="$src" class="graytext" target="_blank"> {la newwindow} </a></p></div>{/block}
+{eval}
+	}else{
+{/eval}
+{block return}<div class="video"><div id="$thisid"></div><script>init_dplayer($("$thisid"),"$src");</script>
+<p class="center"><a href="$src" class="graytext" target="_blank"> {la newwindow} </a></p></div>{/block}
+{eval}
+	}
+	return $return;
+}
+function tpl_bb_attachment($data){
+	$thisid='attachment_'.rand(0,9999);
+	$name=$data['name'];
+	$size=sizecount($data['size']);
+	$isimg=$data['isimg'];
+	$aid=$data['aid'];
+	$add=!$aid?'{la attachment_noexists}':'{la attachment}:<a href="forums.php?mod=ajaxupload&action=download&aid='.$aid.'">'.$name.'</a> '.$size.($isimg?'<br><a href="forums.php?mod=ajaxupload&action=imgview&aid='.$aid.'"><img data-src="forums.php?mod=ajaxupload&action=imgview&aid='.$aid.'" class="lazyload"></a>':'');
+{/eval}
+{block return}<div class="attachment">$add</div> {/block}
+{eval}
+	return $return;
+}
+{/eval}

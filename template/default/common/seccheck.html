@@ -1,0 +1,8 @@
+{eval $tpl_sec_url=$_G['config']['basic_bburl'].'misc.php?mod=secode';}
+{eval $tpl_sec_id='secode_'.rand(0,999);}
+{if $_G['config']['secode_type']==0 || $_G['config']['secode_type']==2}
+	<input type="text" name="secode" id="secode" required>&nbsp;<img src="{$tpl_sec_url}" id="{$tpl_sec_id}">&nbsp;<button onclick="$('{$tpl_sec_id}').src='{$tpl_sec_url}&'+Math.random()">{la refresh_secode}</button>
+
+{else}
+	<input type="text" name="secode" id="secode" required>&nbsp;<audio type="audio/mpeg" src="{$tpl_sec_url}" id="{$tpl_sec_id}"></audio><button onclick="$('{$tpl_sec_id}').src='{$tpl_sec_url}&'+Math.random()">{la refresh_secode}</button> <button onclick="$('{$tpl_sec_id}').play();">{la play}</button>
+{/if}

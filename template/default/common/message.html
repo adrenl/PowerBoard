@@ -1,0 +1,17 @@
+{template common/header}
+<div class="div_father">
+	<div class="div_title">{$_G['config']['bbname']} {la tipsmessage}</div>
+	<div class="div_content">
+		<div class="message">
+			{$message}
+			<br><br>
+			{if $url}
+				<a href="{$url}"> {la no_auto_go_to} </a> 
+			{/if}
+			{if $options['return']}
+				<a href="{BADLINK}" onclick="history.go(-1);"> {la back_to_page} </a> 
+			{/if}
+		</div>
+	</div>
+</div>
+{template common/footer}

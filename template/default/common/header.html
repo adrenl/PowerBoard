@@ -1,0 +1,16 @@
+{eval $powerboard->page_start()}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{if $navtitle}{$navtitle}{/if} - {$_G['config']['basic_bbname']}</title>
+        <link rel="stylesheet" type="text/css" href="{css common}" />
+        <script src="static/javascript/common.js"></script>
+        {out isset($puttoheader)?$puttoheader:''}
+    </head>
+    <body>
+        <div id="nav">{la index_wel}<a href="user.php?mod=login">{la login}</a> | <a href="user.php?mod=register">{la register}</a></div>
+        <div class="header">
+           <a href="{$_G['config']['basic_bburl']}"><img src="{$_G['config']['basic_bblogo']}"></a><br>
+           {la locate_page} : {$navtitle}
+        </div>
+        <hr>

@@ -1,0 +1,28 @@
+{eval $puttoheader='<script src="static/javascript/login.js"></script>'}
+{template common/header}
+<script>
+</script>
+<div class="div_father">
+    <div class="div_title">{la login}</div>
+    <div class="div_content reginfo">
+        <form method="post" onsubmit="on_login();return false;">
+            <table align="center">
+                <tr>
+                    <td>{la username}</td>
+                    <td><input type="text" size="25" name="username" id="username" required></td>
+                </tr>
+                <tr>
+                    <td>{la password}</td>
+                    <td><input type="password" size="25" name="password" id="password" required></td>
+                </tr>
+                <tr>
+                    <td>{la secode}</td>
+                    <td>{subtemplate common/seccheck}</td>
+                </tr>
+                
+            </table>
+            <input type="submit"class="submitbtn" value="{la login}">
+        </form>
+    </div>
+</div>
+{template common/footer}

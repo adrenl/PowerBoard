@@ -1,0 +1,29 @@
+{eval $puttoheader='<link rel="stylesheet" type="text/css" href="{css view}">'}
+{template common/header}
+<div class="div_father">
+    <div class="div_title">{$topic['title']} <span class="floor">{$topic['floor']}#</span></div>
+        <div class="div_content nopadding">
+            <div class="pcolumn_left">
+                {avatar $topic['author_uid']}<br>
+                {$topic['author']}
+            </div><div class="pcolumn_right">
+                {$topic['content']}
+            </div>
+        </div>
+</div>
+{if isset($post)}
+    {foreach $post $value}
+    <div class="div_father">
+        <div class="div_title">{out $value['title']?$value['title']:'&nbsp;'} <span class="floor">{$value['floor']}#</span></div>
+            <div class="div_content nopadding">
+                <div class="pcolumn_left">
+                    {avatar $value['author_uid']}<br>
+                    {$value['author']}
+                </div><div class="pcolumn_right">
+                    {$value['content']}
+                </div>
+            </div>
+    </div>
+    {/foreach}
+{/if}
+{template common/footer}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="170" height="85">
+    <polygon points="165,70 150,70 150,80 165,70" style="fill:gray;stroke:gray;stroke-width:1"/>
+    <polygon points="8,1 10,1 170,1 170,65 8,65" style="fill:#c0c0c0;stroke:#c0c0c0;stroke-width:1"/>
+    <polygon points="5,5 165,5 165,70 150,70 150,80 5,80" style="fill:white;stroke:black;stroke-width:2"/>
+    <line x1="165" y1="70" x2="150" y2="80" style="stroke:black;stroke-width:2"/>
+    <text x="45" y="35" fill="#ff794b" style="font-size:13px;font-family:sans-self;">Power</text>
+    <text x="85" y="35" fill="blue" style="font-size:13px;font-family:sans-self;">Board</text>
+    <text x="15" y="55" fill="green" style="font-size:13px;font-family:sans-self;">Bulletin Board System</text>
+</svg>
